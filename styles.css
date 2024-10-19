@@ -1,16 +1,22 @@
-
-/* Base styles */
+/* Common Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Background color */
 }
 
+h1, h2, h3, h4, h5 {
+    color: #333; /* Common header color */
+}
+
+p {
+    color: #666; /* Text color for paragraphs */
+}
+
+/* Header Styling */
 header {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Header background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -18,11 +24,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 nav img {
-    height: 50px; /* Adjust the height based on your logo */
+    height: 50px;
 }
 
 nav ul {
@@ -32,67 +38,275 @@ nav ul {
 }
 
 nav li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: 16px;
 }
 
+nav a:hover {
+    color: #ff6347;
+}
+
+/* Main Section Styling */
 main {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
-h1, h2, h3 {
-    color: #333;
+/* Quote Section Styles */
+section:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust for layout */
+    padding: 40px 20px; /* Padding around the section */
+    background-color: #ffffff; /* Background for contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
 }
 
+section:nth-of-type(2) blockquote {
+    font-size: 24px; /* Font size for quote */
+    color: #333; /* Quote text color */
+    font-style: italic; /* Italic style for quotes */
+    margin: 0 20px; /* Margins around the quote */
+    flex: 2; /* Allow the quote to take more space */
+}
+
+section:nth-of-type(2) h3 {
+    font-size: 20px; /* Name font size */
+    margin-top: 10px; /* Space above name */
+}
+
+section:nth-of-type(2) p {
+    font-size: 16px; /* Job title font size */
+    color: #888; /* Job title color */
+}
+
+/* Button Styles */
 button {
-    background-color: #ff6347; /* Tomato */
+    background-color: #ff6347; /* Button color */
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 button:hover {
-    background-color: #ff4500; /* Darker tomato */
+    background-color: #ff4500;
+}
+/* Videos List Section Styles */
+section:nth-of-type(3) {
+    padding: 40px 20px; /* Padding around the section */
 }
 
-blockquote {
-    font-style: italic;
-    border-left: 4px solid #ff6347;
-    padding-left: 20px;
-    margin: 20px 0;
+section:nth-of-type(3) h2 {
+    font-size: 28px; /* Title font size */
+    margin-bottom: 20px; /* Space below the title */
 }
 
+section:nth-of-type(3) > div {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    gap: 20px; /* Space between items */
+}
+
+section:nth-of-type(3) > div > div {
+    background-color: #ffffff; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside each card */
+    flex: 1 1 calc(25% - 20px); /* Responsive width for cards */
+    max-width: calc(25% - 20px); /* Ensures a max width */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+section:nth-of-type(3) img {
+    border-radius: 5px; /* Rounded corners for images */
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+section:nth-of-type(3) h3 {
+    font-size: 20px; /* Video title font size */
+    margin: 10px 0 5px; /* Margins above and below */
+}
+
+section:nth-of-type(3) p {
+    font-size: 14px; /* Description font size */
+    color: #666; /* Description color */
+}
+
+section:nth-of-type(3) > div > div > div {
+    display: flex;
+    align-items: center; /* Center align items */
+    margin-top: 10px; /* Space above */
+}
+
+section:nth-of-type(3) > div > div > div img {
+    border-radius: 50%; /* Circle for the creator's image */
+    width: 30px; /* Fixed size for creator image */
+    height: 30px; /* Fixed size for creator image */
+    margin-right: 10px; /* Space between image and name */
+}
+
+section:nth-of-type(3) > div > div > div h4 {
+    font-size: 16px; /* Creator name font size */
+    margin: 0; /* Remove default margins */
+}
+
+section:nth-of-type(3) > div > div > div div {
+    display: flex;
+    align-items: center; /* Center align stars */
+    margin-top: 5px; /* Space above ratings */
+}
+
+section:nth-of-type(3) .fa-star {
+    color: #ff6347; /* Star color */
+}
+
+section:nth-of-type(3) p:last-of-type {
+    font-size: 14px; /* Duration font size */
+    color: #666; /* Duration color */
+}
+/* Membership Section Styles */
+section:nth-of-type(4) {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+section:nth-of-type(4) h2 {
+    font-size: 2rem; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+section:nth-of-type(4) div {
+    display: flex;
+    justify-content: center; /* Center the membership cards */
+    flex-wrap: wrap; /* Wrap to next line if needed */
+    gap: 20px; /* Space between cards */
+}
+
+section:nth-of-type(4) div img {
+    width: 100px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+section:nth-of-type(4) div h3 {
+    font-size: 1.5rem; /* Subheading size */
+    margin-top: 10px; /* Space above subheading */
+}
+
+section:nth-of-type(4) div p {
+    font-size: 1rem; /* Paragraph size */
+    text-align: center; /* Center align text */
+}
+
+section:nth-of-type(4) button {
+    margin-top: 20px; /* Space above button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+section:nth-of-type(4) button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+/* FAQ Section Styles */
+section:nth-of-type(5) {
+    padding: 40px 20px; /* Space around the section */
+    background-color: #ffffff; /* Background color */
+}
+
+section:nth-of-type(5) h2 {
+    font-size: 2rem; /* Heading size */
+    text-align: center; /* Center align heading */
+    margin-bottom: 30px; /* Space below heading */
+}
+
+section:nth-of-type(5) div {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between each FAQ item */
+}
+
+section:nth-of-type(5) div > div {
+    border: 1px solid #dddddd; /* Border around each FAQ */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Space inside each FAQ */
+}
+
+section:nth-of-type(5) div h3 {
+    font-size: 1.5rem; /* Question size */
+    margin: 0; /* Remove default margin */
+    cursor: pointer; /* Indicate that it's clickable */
+}
+
+section:nth-of-type(5) div div p {
+    font-size: 1rem; /* Answer size */
+    margin: 10px 0 0; /* Space above answer */
+    display: none; /* Initially hide the answers */
+}
+
+section:nth-of-type(5) div div.active p {
+    display: block; /* Show answer when active */
+}
+/* Footer Styles */
 footer {
-    background-color: #ffffff;
-    padding: 20px;
-    text-align: center;
+    background-color: #f8f9fa; /* Light background color */
+    padding: 40px 20px; /* Space around the footer */
+    text-align: center; /* Center text */
 }
 
 footer section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    gap: 20px; /* Space between items */
 }
 
-footer i {
-    margin-left: 10px;
-    cursor: pointer;
+footer img {
+    width: 100px; /* Set a consistent logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+footer div {
+    display: flex;
+    justify-content: center; /* Center social media icons */
+    gap: 15px; /* Space between icons */
+}
+
+footer div i {
+    font-size: 1.5rem; /* Icon size */
+    color: #6c757d; /* Icon color */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+footer div i:hover {
+    color: #495057; /* Darker color on hover */
 }
 
 footer p {
-    margin: 10px 0 0;
+    font-size: 0.9rem; /* Font size for copyright */
+    color: #6c757d; /* Text color */
+    margin: 0; /* Remove default margin */
 }
